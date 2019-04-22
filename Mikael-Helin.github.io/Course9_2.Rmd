@@ -1,0 +1,24 @@
+---
+title: "Leaflet"
+author: "Mikael Helin"
+date: '2019-04-22'
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+slidy_presentation: default
+ioslides_presentation: default
+---
+
+## Getting Maps
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>% 
+  addTiles()
+set.seed(2016-04-25)
+df <- data.frame(lat = runif(500, min = 39.25, max = 39.35),lng = runif(500, min = -76.65, max = -76.55))
+df %>% leaflet() %>%  addTiles() %>%  addMarkers(clusterOptions = markerClusterOptions())
+```
+
