@@ -1,0 +1,20 @@
+---
+title: "Course 9 week 3 - Project"
+author: "Mikael Helin"
+date: '2019-04-22'
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+  ioslides_presentation: default
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r plot, message=FALSE}
+library(plotly)
+data("diamonds",package="ggplot2")
+plot_ly(diamonds, x = ~cut)
+```
